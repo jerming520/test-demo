@@ -1,0 +1,16 @@
+body {
+    /* font-family: 先英文"Roboto", 在中文"Noto Sans TC",*/
+    font-family: "Roboto", "Noto Sans TC", sans-serif;
+    background-color: #525457;
+    color: #eee;
+}
+
+/*  */
+#gamenewsSlider img {
+    filter: grayscale(50%) sepia(80%);
+}
+
+/* 
+
+
+ */
