@@ -1,16 +1,100 @@
+/*  */
 body {
     /* font-family: 先英文"Roboto", 在中文"Noto Sans TC",*/
     font-family: "Roboto", "Noto Sans TC", sans-serif;
+    /* 怕出錯先將全網站改成星空黑,字體為白色 */
     background-color: #525457;
     color: #eee;
 }
-
 /*  */
-#gamenewsSlider img {
-    filter: grayscale(50%) sepia(80%);
-}
+#gamenewsSlider {
+    .carousel-indicators {
+        /* 換頁[呈現的圓形圖案gap設定在父容器,不設定在>button內 */
+        gap: 15px;
 
+        >button {
+            height: 15px;
+            width: 15px;
+            border-radius: 50%;
+        }
+    }
+    .carousel-item {
+        padding-bottom: 240px;
+        /* 文字有因透明度換頁時字體導致模糊再貼一次background-color就可改善這問題 */
+        background-color: #282c34;
+
+        img {
+            filter: grayscale(50%) sepia(80%);
+        }
+        .carousel-caption {
+            /* 因rwd大畫面,小畫面將使一行字與兩行字形成版面跑掉,顧由往上對齊top,不用往下對齊bottom */
+            bottom: unset;
+            top: 55%;
+
+            h2 {
+                text-shadow: 0px -3px 3px black;
+                letter-spacing: 5px;
+            }
+        }
+    }
+    button>i {
+        font-size: 3rem;
+        background-color: #0005;
+        width: 50px;
+        height: 50px;
+        line-height: 50px;
+    }
+    .carousel-item::after {
+        content: '';
+        background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' width='10' height='10'%3e%3cg opacity='0.5' stroke-width='1' stroke='%23000' fill='none'%3e%3cline y2='10' x2='10' y1='0' x1='0'/%3e%3cline y2='15' x2='5' y1='5' x1='-5'/%3e%3cline y2='5' x2='15' y1='-5' x1='5'/%3e%3c/g%3e%3c/svg%3e ");
+        /* item已有 position: relative; */
+        position: absolute;
+        /* 寫了 position: absolute就不用寫(display: block);因為已經是block*/
+        left: 0;
+        top: 0;
+        right: 0;
+        bottom: 0;
+    }
+}
+/*  */
+/* letter-spacing優先權,故@media(max-width: 575px)寫在#gamenewsSlider5之後 */
+@media (max-width: 575px) {
+    #gamenewsSlider .carousel-item .carousel-caption {
+        left: 10px;
+        right: 10px;
+        h2 {
+            letter-spacing: 1px;
+        }
+    }
+}
 /* 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
  */
