@@ -26,10 +26,11 @@ body {
         img {
             filter: grayscale(50%) sepia(80%);
         }
+
         .carousel-caption {
             /* 因rwd大畫面,小畫面將使一行字與兩行字形成版面跑掉,顧由往上對齊top,不用往下對齊bottom */
             bottom: unset;
-            top: 55%;
+            top: 51%;
 
             h2 {
                 text-shadow: 0px -3px 3px black;
@@ -62,39 +63,49 @@ body {
     #gamenewsSlider .carousel-item .carousel-caption {
         left: 10px;
         right: 10px;
+
         h2 {
             letter-spacing: 1px;
         }
     }
 }
+/*  */
+/* 這段文字與圖片縮放,可以不參考筆記 */
+@media (min-width: 992px) {
+    #gamenewsPallet article {
+        padding-top: 250px;
+
+        >.col:nth-child(odd) {
+            transform: translateY(-50%);
+            /* 階梯呈現,先在col中做padding-bottom,再調整padding-top*/
+            padding-bottom: 100px;
+        }
+        .card {
+            /* 因卡片撐大故超出部呈現overflow: hidden*/
+            overflow: hidden;
+
+            /* img跟字幕一樣都要延遲畫面,畫面才比較順 */
+            img {
+                transform: scale(1.15) rotate(5deg);
+                transition: 0.3s;
+            }
+            /* 先關掉字幕scale(0),當hover時呈現字幕scale(1) */
+            .card-img-overlay {
+                transform: scale(0);
+                transition: 0.3s;
+            }
+            &:hover {
+                img {
+                    transform: scale(1.5) rotate(0deg);
+                }
+                .card-img-overlay {
+                    transform: scale(1);
+                }
+            }
+
+        }
+    }
+}
 /* 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
  */
