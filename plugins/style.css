@@ -9,7 +9,7 @@ body {
 /*  */
 #gamenewsSlider {
     .carousel-indicators {
-        /* 換頁[呈現的圓形圖案gap設定在父容器,不設定在>button內 */
+        /* 換頁呈現的圓形圖案gap設定在父容器,不設定在>button內 */
         gap: 15px;
 
         >button {
@@ -26,7 +26,6 @@ body {
         img {
             filter: grayscale(50%) sepia(80%);
         }
-
         .carousel-caption {
             /* 因rwd大畫面,小畫面將使一行字與兩行字形成版面跑掉,顧由往上對齊top,不用往下對齊bottom */
             bottom: unset;
@@ -102,10 +101,14 @@ body {
                     transform: scale(1);
                 }
             }
-
         }
     }
 }
-/* 
+/*  */
+/*  按下nav的按鈕後,將壓到圖故用padding推開,除了lokiSlider其他的都用padding推開*/
+section:not(#gamenewsSlider) {
+    padding-top: 110px;
 
- */
+
+    
+}

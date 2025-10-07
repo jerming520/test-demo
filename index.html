@@ -27,50 +27,41 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
 </head>
 <!--  -->
-<body>
+<!-- 加入data-bs-spy="scroll" data-bs-target="#gamenewsMenu",可以讓卷軸滾動時固定navbar的字如:pallet,nav必須加入fixed-top -->
+
+<body data-bs-spy="scroll" data-bs-target="#gamenewsMenu">
     <!--  -->
-    <nav class="navbar navbar-expand-lg bg-body-tertiary">
-        <div class="container-fluid">
-            <a class="navbar-brand" href="#">Navbar</a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
-                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
-                aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
+    <!-- 在這網址中選第一個https://getbootstrap.com/docs/5.3/components/navbar/ -->
+    <!-- style="--bs-dark-rgb:105,120,129"為了示範洗顏色,用style洗nav顏色,不用css洗  -->
+    <nav class="navbar navbar-expand-lg bg-dark bg-opacity-75 fixed-top" data-bs-theme="dark"
+        style="--bs-dark-rgb:110,120,130">
+        <div class="container">
+            <!-- d-flex align-items-center做圖與字的對齊 -->
+            <a class="navbar-brand d-flex align-items-center" href="#">
+                <!-- 改掉style <span class="fa-stack" style="vertical-align: top;"> -->
+                <!--到font awesome>doc>輸入size找園跟星的混和圖形  -->
+                <span class="fa-stack">
+                    <i class="fa-solid fa-circle fa-stack-2x"></i>
+                    <i class="fa-solid fa-star fa-stack-1x text-dark"></i>
+                </span>
+                <span>gamenews</span>
+            </a>
+            <!-- text-bg-light,將menu-icon圖換成白色,fs-3圖形換成大的-->
+            <button class="navbar-toggler text-bg-light" type="button" data-bs-toggle="collapse"
+                data-bs-target="#gamenewsMenu">
+                <!-- <span class="navbar-toggler-icon"></span> -->
+                <i class="fa-brands fa-elementor fs-3"></i>
             </button>
-            <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                    <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="#">Home</a>
-                    </li>
-                    <li class="nav-item dropdown1">
-                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
-                            aria-expanded="false">
-                            Dropdown1
-                        </a>
-                        <ul class="dropdown-menu">
-                            <li><a class="dropdown-item" href="#">Action11</a></li>
-                            <li><a class="dropdown-item" href="#">Action12</a></li>
-                            <li>
-                                <hr class="dropdown-divider">
-                            </li>
-                            <li><a class="dropdown-item" href="#">Something else here1</a></li>
-                        </ul>
-                    </li>
-                    <li class="nav-item dropdown2">
-                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
-                            aria-expanded="false">
-                            Dropdown2
-                        </a>
-                        <ul class="dropdown-menu">
-                            <li><a class="dropdown-item" href="#">Action21</a></li>
-                            <li><a class="dropdown-item" href="#">Action22</a></li>
-                            <li>
-                                <hr class="dropdown-divider">
-                            </li>
-                            <li><a class="dropdown-item" href="#">Something else here2</a></li>
-                        </ul>
-                    </li>
-                </ul>
+            <div class="collapse navbar-collapse" id="gamenewsMenu">
+                <!-- ms-auto將導覽字靠右,因為me用不出故用ms -->
+                <div class="navbar-nav ms-auto gap-0 gap-lg-3 ps-5 ps-lg-0">
+                    <!-- 在https://getbootstrap.com/docs/5.3/components/navbar/#nav有另一個寫法a不用li-->
+                    <a class="nav-link" href="#gamenewsPallet">Pallet</a>
+                    <a class="nav-link" href="#gamenewsPark">Park</a>
+                    <a class="nav-link" href="#gamenewsService">Service</a>
+                    <a class="nav-link" href="#gamenewsRule">Rule</a>
+                    <a class="nav-link" href="#gamenewsContact">Contact</a>
+                </div>
             </div>
         </div>
     </nav>
@@ -136,7 +127,7 @@
             <img src="https://picsum.photos/300/300/?random=3">
             <img src="https://picsum.photos/300/300/?random=4">
         </div>
-        <header class="h2 border-start border-5 border-warning ps-1 my-5">營位介紹</header>
+        <header class="h2 border-start border-5 border-warning ps-1 my-5">Pallet</header>
         <!-- 這裡article跟row合併因為article無什麼特別功能故可以合併 -->
         <article class="row row-cols-1 row-cols-lg-2 g-3 g-lg-5 flex-row-reverse">
             <div class="col">
@@ -219,12 +210,25 @@
                     </div>
                 </div>
             </div>
-
         </article>
     </section>
 </body>
 </html>
 <!-- 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
