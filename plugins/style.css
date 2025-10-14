@@ -11,7 +11,6 @@ body {
     .carousel-indicators {
         /* 換頁呈現的圓形圖案gap設定在父容器,不設定在>button內 */
         gap: 15px;
-
         >button {
             height: 15px;
             width: 15px;
@@ -22,7 +21,6 @@ body {
         padding-bottom: 240px;
         /* 文字有因透明度換頁時字體導致模糊再貼一次background-color就可改善這問題 */
         background-color: #282c34;
-
         img {
             filter: grayscale(50%) sepia(80%);
         }
@@ -30,7 +28,6 @@ body {
             /* 因rwd大畫面,小畫面將使一行字與兩行字形成版面跑掉,顧由往上對齊top,不用往下對齊bottom */
             bottom: unset;
             top: 51%;
-
             h2 {
                 text-shadow: 0px -3px 3px black;
                 letter-spacing: 5px;
@@ -62,7 +59,6 @@ body {
     #gamenewsSlider .carousel-item .carousel-caption {
         left: 10px;
         right: 10px;
-
         h2 {
             letter-spacing: 1px;
         }
@@ -73,7 +69,6 @@ body {
 @media (min-width: 992px) {
     #gamenewsPallet article {
         padding-top: 250px;
-
         >.col:nth-child(odd) {
             transform: translateY(-50%);
             /* 階梯呈現,先在col中做padding-bottom,再調整padding-top*/
@@ -82,7 +77,6 @@ body {
         .card {
             /* 因卡片撐大故超出部呈現overflow: hidden*/
             overflow: hidden;
-
             /* img跟字幕一樣都要延遲畫面,畫面才比較順 */
             img {
                 transform: scale(1.15) rotate(5deg);
@@ -108,7 +102,199 @@ body {
 /*  按下nav的按鈕後,將壓到圖故用padding推開,除了lokiSlider其他的都用padding推開*/
 section:not(#gamenewsSlider) {
     padding-top: 110px;
-
-
-    
 }
+/*  */
+/* 小畫面註解掉的因為不需要hover,加入center/cover解析度模糊,但加入fixed解析度拉回,#3338跟圖片做混和色background-blend-mode-*/
+#gamenewsPark {
+    background: url("https://picsum.photos/1920/1200/?random=1") #3338 no-repeat center/cover fixed;
+    background-blend-mode: lighten;
+    article .card-img-overlay {
+        overflow: hidden;
+        &::after {
+            content: "";
+            background-color: #0005;
+            /* blur(5px);毛玻璃 */
+            backdrop-filter: blur(5px);
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            /* transition: top 0.3s; */
+            top: 0%;
+        }
+    /* &:hover::after {
+            top:100%;
+        }
+     */
+        .card-title {
+            text-shadow: 1px 2px 3px #000;
+            opacity: 1;
+            /* transition: opacity 0.3s; */
+            z-index: 5;
+        }
+    /* &:hover .card-title {
+            opacity: 1;
+        } 
+    */
+    }
+}
+/*  */
+/* 大畫面註解掉的因為重複小畫面程式碼 */
+@media (min-width: 992px) {
+    #gamenewsPark article .card-img-overlay {
+        overflow: hidden;
+        /* 這裡2段為遮罩處理 */
+        &::after {
+            /* content: ""; */
+            background-color: #0009;
+            /* blur(5px);毛玻璃 */
+            /* backdrop-filter: blur(5px); */
+            /* 
+            width: 100%;
+            height: 100%;
+            position: absolute;
+             */
+            transition: top 0.3s;
+            /* top:0%; */
+        }
+        &:hover::after {
+            top: 100%;
+        }
+        /* 這裡2段為文字處理 */
+        /*opacity為0表示看不見,z-indx讓文字浮在遮罩上 */
+        .card-title {
+            /* text-shadow: 1px 2px 3px #000; */
+            opacity: 0;
+            transition: opacity 0.3s;
+            /* z-index: 5; */
+        }
+        &:hover .card-title {
+            opacity: 1;
+        }
+    }
+}
+/* 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ */

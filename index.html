@@ -25,6 +25,9 @@
         crossorigin="anonymous" /> -->
     <!-- or google 搜尋 font awesome cdn Libraries ,link完再用font awesome找要的圖片複製程式碼-->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
+    <!-- masonry -->
+    <script src="./plugins/masonry.pkgd.min.js"></script>
+    <script src="./plugins/custom.js"></script>
 </head>
 <!--  -->
 <!-- 加入data-bs-spy="scroll" data-bs-target="#gamenewsMenu",可以讓卷軸滾動時固定navbar的字如:pallet,nav必須加入fixed-top -->
@@ -134,7 +137,7 @@
                 <div class="card text-bg-dark">
                     <img src="https://picsum.photos/800/600/?random=1" class="card-img">
                     <div
-                        class="card-img-overlay bg-dark bg-opacity-50 d-flex flex-column justify-content-center align-items-center text-center">
+                        class="card-img-overlay d-flex justify-content-center align-items-center bg-dark bg-opacity-50 d-flex flex-column justify-content-center align-items-center text-center">
                         <h3 class="card-title text-warning fw-bolder">Card title</h3>
                         <!-- ul的class名稱可以不要,拿掉ul的標記"list-unstyled -->
                         <ul class="list-unstyled">
@@ -212,66 +215,226 @@
             </div>
         </article>
     </section>
+    <section id="gamenewsPark" class="container-fluid">
+        <header class="container mb-5">
+            <h2 class="border-start border-5 border-warning ps-1 my-5">Park</h2>
+            <!--text-center w-75 mx-auto,調整文字對齊  -->
+            <p class="text-center w-75 mx-auto">Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque ullam
+                explicabo quidem placeat eius quas? Pariatur illum possimus assumenda! Nesciunt provident eos tempore
+                exercitationem est optio facere reiciendis, id odio.</p>
+        </header>
+        <!-- 小畫面gutter為3,大畫面g-md以上為0,圖面牆小畫面為1,md為2,lg為4 -->
+        <article class="row flex-row g-3 g-md-0 row-cols-1 row-cols-md-2 row-cols-lg-4">
+            <div class="col">
+                <!-- 因圖片牆不要有框限,div class=card,本身有框線跟設定,不需要拿掉一層div,但有absolute,問題原本要在col加上relative但-masonry有js自動算absolute故不用加-->
+                <img src="https://picsum.photos/500/800/?random=1" class="card-img">
+                <div class="card-img-overlay d-flex justify-content-center align-items-center">
+                    <h5 class="card-title">Card title</h5>
+                </div>
+            </div>
+            <div class="col">
+                <img src="https://picsum.photos/300/800/?random=2" class="card-img">
+                <div class="card-img-overlay d-flex justify-content-center align-items-center">
+                    <h5 class="card-title">Card title</h5>
+                </div>
+            </div>
+            <div class="col">
+                <img src="https://picsum.photos/300/700/?random=3" class="card-img">
+                <div class="card-img-overlay d-flex justify-content-center align-items-center">
+                    <h5 class="card-title">Card title</h5>
+                </div>
+            </div>
+            <div class="col">
+                <img src="https://picsum.photos/400/500/?random=4" class="card-img">
+                <div class="card-img-overlay d-flex justify-content-center align-items-center">
+                    <h5 class="card-title">Card title</h5>
+                </div>
+            </div>
+            <div class="col">
+                <img src="https://picsum.photos/400/700/?random=5" class="card-img">
+                <div class="card-img-overlay d-flex justify-content-center align-items-center">
+                    <h5 class="card-title">Card title</h5>
+                </div>
+            </div>
+            <div class="col">
+                <img src="https://picsum.photos/400/400/?random=6" class="card-img">
+                <div class="card-img-overlay d-flex justify-content-center align-items-center">
+                    <h5 class="card-title">Card title</h5>
+                </div>
+            </div>
+            <div class="col">
+                <img src="https://picsum.photos/400/800/?random=7" class="card-img">
+                <div class="card-img-overlay d-flex justify-content-center align-items-center">
+                    <h5 class="card-title">Card title</h5>
+                </div>
+            </div>
+            <div class="col">
+                <img src="https://picsum.photos/400/500/?random=8" class="card-img">
+                <div class="card-img-overlay d-flex justify-content-center align-items-center">
+                    <h5 class="card-title">Card title</h5>
+                </div>
+            </div>
+            <div class="col">
+                <img src="https://picsum.photos/400/800/?random=9" class="card-img">
+                <div class="card-img-overlay d-flex justify-content-center align-items-center">
+                    <h5 class="card-title">Card title</h5>
+                </div>
+            </div>
+            <div class="col">
+                <img src="https://picsum.photos/400/700/?random=10" class="card-img">
+                <div class="card-img-overlay d-flex justify-content-center align-items-center">
+                    <h5 class="card-title">Card title</h5>
+                </div>
+            </div>
+            <div class="col">
+                <img src="https://picsum.photos/400/500/?random=10" class="card-img">
+                <div class="card-img-overlay d-flex justify-content-center align-items-center">
+                    <h5 class="card-title">Card title</h5>
+                </div>
+            </div>
+        </article>
+    </section>
+    <section id="gamenewsService" class="container-fluid ">
+        <header class="container">
+            <h2 class="border-start border-5 border-warning ps-3 my-5">Service</h2>
+        </header>
+        <!--container跟row跟col一定要3層  -->
+        <article class="container pb-5">
+            <!-- 小畫面1個,大畫面3個,gutter全部為3 -->
+            <div class="row flex-row row-cols-1 row-cols-lg-3 g-3">
+                <div class="col">
+                    <!-- h-100當段落字長短不一時框距離保持一樣,text-bg-dark黑底白字,rounded-0圖框直角 -->
+                    <!-- h100齊高, rounded-0消除圓角 -->
+                    <div class="card h-100 text-bg-dark bg-gradient rounded-0 shadow-lg py-3"
+                        style="--bs-box-shadow-lg:10px -10px 30px 1px #fffff3 ">
+                        <!--header跟body中間有一條線用border-0去除  -->
+                        <div class="card-header border-0 text-center">
+                            <h3 class="card-title">card-title</h3>
+                            <!-- 圖片粗線,圖片色必須用border border-warning border-5 -->
+                            <img class="rounded-circle border border-warning border-5 m-3"
+                                src="https://picsum.photos/150/150/?random=10">
+                        </div>
+                        <div class="card-body">
+                            <h6 class="card-subtitle mb-2 text-info">"card-subtitle</h6>
+                            <ul class="ps-0">
+                                <!-- 原本未調過的div,p,span的程式碼li-->
+                                <!-- 
+                                <li class="py-1 d-flex justify-content-between align-items-start">
+                                    <div>
+                                        <div class="px-2 text-bg-info">Snow Peak001</div>
+                                        <p class="mb-1 px-2">100X300 cm、mm</p>
+                                    </div>
+                                    <span class="badge bg-info rounded-pill">NT 1200</span>
+                                </li> 
+                                -->
+                                <li class="py-1 d-flex gap-3 align-items-start">
+                                    <div class="flex-grow-1">
+                                        <div class="px-2 text-bg-info">Snow Peak001</div>
+                                        <p class="mb-1 px-2">100X300 cm、</p>
+                                    </div>
+                                    <span class="badge bg-info rounded-pill" style="flex:0 0 20%;">NT 1000</span>
+                                </li>
+                                <li class="py-1 d-flex gap-3 align-items-start">
+                                    <div class="flex-grow-1">
+                                        <div class="px-2 text-bg-info">Snow Peak002</div>
+                                        <p class="mb-1 px-2">200X300 cm、</p>
+                                    </div>
+                                    <span class="badge bg-info rounded-pill" style="flex:0 0 20%;">NT 2000</span>
+                                </li>
+                                <li class="py-1 d-flex gap-3 align-items-start">
+                                    <div class="flex-grow-1">
+                                        <div class="px-2 text-bg-info">Snow Peak003</div>
+                                        <p class="mb-1 px-2">300X300 cm、</p>
+                                    </div>
+                                    <span class="badge bg-info rounded-pill" style="flex:0 0 20%;">NT 3000</span>
+                                </li>
+                                <li class="py-1 d-flex gap-3 align-items-start">
+                                    <div class="flex-grow-1">
+                                        <div class="px-2 text-bg-info">Snow Peak004</div>
+                                        <p class="mb-1 px-2">400X300 cm、</p>
+                                    </div>
+                                    <span class="badge bg-info rounded-pill" style="flex:0 0 20%;">NT 4000</span>
+                                </li>
+                                <li class="py-1 d-flex gap-3 align-items-start">
+                                    <div class="flex-grow-1">
+                                        <div class="px-2 text-bg-info">Snow Peak005</div>
+                                        <p class="mb-1 px-2">500X300 cm、</p>
+                                    </div>
+                                    <span class="badge bg-info rounded-pill" style="flex:0 0 20%;">NT 5000</span>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <!--  -->
+                <div class="col">
+                    <div class="card h-100 text-bg-dark bg-gradient rounded-0 shadow-lg py-3"
+                        style="--bs-box-shadow-lg:10px -10px 30px 1px #fffff3 ">
+                        <!--  -->
+                        <div class="card-header border-0 text-center">
+                            <h3 class="card-title">card-title</h3>
+                            <img class="rounded-circle border border-warning border-5 m-3"
+                                src="https://picsum.photos/150/150/?random=11">
+                        </div>
+                        <!--  -->
+                        <div class="card-body">
+                            <h6
+                                class="card-subtitle mb-2 text-warning d-flex justify-content-between align-items-start">
+                                cdrd-subtitle <span class="badge bg-warning rounded-pill">NT 200</span>
+                            </h6>
+                            <p class="ps-4">
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio, architecto? Velit quia
+                                sit distinctio consectetur.
+                            </p>
+                            <h6
+                                class="card-subtitle mb-2 text-warning d-flex justify-content-between align-items-start">
+                                card-subtitle <span class="badge bg-warning rounded-pill">NT 200</span>
+                            </h6>
+                            <p class="ps-4">
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio, architecto? Velit quia
+                                sit distinctio consectetur.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <!--  -->
+                <div class="col">
+                    <div class="card h-100 text-bg-dark bg-gradient rounded-0 shadow-lg py-3"
+                        style="--bs-box-shadow-lg:10px -10px 30px 1px #fffff3 ">
+                        <!--  -->
+                        <div class="card-header border-0 text-center">
+                            <h3 class="card-title">card-title</h3>
+                            <img class="rounded-circle border border-warning border-5 m-3"
+                                src="https://picsum.photos/150/150/?random=12">
+                        </div>
+                        <div class="card-body">
+                            <h6
+                                class="card-subtitle mb-2 text-success d-flex justify-content-between align-items-start">
+                               card-subtitle
+                                <span class="badge bg-success rounded-pill">NT 200</span>
+                            </h6>
+                            <ul class="list-group px-4 mb-3">
+                                <li class="py-1">Lorem ipsum dolor sit amet.</li>
+                                <li class="py-1">Lorem ipsum dolor sit amet.</li>
+                                <li class="py-1">Lorem ipsum dolor sit amet.</li>
+                                <li class="py-1">Lorem ipsum dolor sit amet.</li>
+                                <li class="py-1">Lorem ipsum dolor sit amet.</li>
+                                <li class="py-1">Lorem ipsum dolor sit amet.</li>
+                                <li class="py-1">Lorem ipsum dolor sit amet.</li>
+                                <li class="py-1">Lorem ipsum dolor sit amet.</li>
+                                <li class="py-1">Lorem ipsum dolor sit amet.</li>
+                                <li class="py-1">Lorem ipsum dolor sit amet.</li>
+                                <li class="py-1">Lorem ipsum dolor sit amet.</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </article>
+    </section>
 </body>
 </html>
 <!-- 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
