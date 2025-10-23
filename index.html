@@ -31,7 +31,6 @@
 </head>
 <!--  -->
 <!-- 加入data-bs-spy="scroll" data-bs-target="#gamenewsMenu",可以讓卷軸滾動時固定navbar的字如:pallet,nav必須加入fixed-top -->
-
 <body data-bs-spy="scroll" data-bs-target="#gamenewsMenu">
     <!--  -->
     <!-- 在這網址中選第一個https://getbootstrap.com/docs/5.3/components/navbar/ -->
@@ -123,7 +122,7 @@
         </button>
     </section>
     <!--  -->
-    <section id="gamenewsPallet" class="container">
+    <section id="gamenewsPallet" class="container ">
         <div class="row row-cols-4 g-0">
             <img src="https://picsum.photos/300/300/?random=1">
             <img src="https://picsum.photos/300/300/?random=2">
@@ -215,7 +214,7 @@
             </div>
         </article>
     </section>
-    <section id="gamenewsPark" class="container-fluid">
+    <section id="gamenewsPark" class="container-fluid pb-5">
         <header class="container mb-5">
             <h2 class="border-start border-5 border-warning ps-1 my-5">Park</h2>
             <!--text-center w-75 mx-auto,調整文字對齊  -->
@@ -224,7 +223,7 @@
                 exercitationem est optio facere reiciendis, id odio.</p>
         </header>
         <!-- 小畫面gutter為3,大畫面g-md以上為0,圖面牆小畫面為1,md為2,lg為4 -->
-        <article class="row flex-row g-3 g-md-0 row-cols-1 row-cols-md-2 row-cols-lg-4">
+        <article class="row flex-row g-3 g-md-0 row-cols-1 row-cols-md-2 row-cols-lg-4 pb-5">
             <div class="col">
                 <!-- 因圖片牆不要有框限,div class=card,本身有框線跟設定,不需要拿掉一層div,但有absolute,問題原本要在col加上relative但-masonry有js自動算absolute故不用加-->
                 <img src="https://picsum.photos/500/800/?random=1" class="card-img">
@@ -294,7 +293,8 @@
             </div>
         </article>
     </section>
-    <section id="gamenewsService" class="container-fluid ">
+    <!-- 不看筆記在section跟article各加pb-5大家各撐一些距離,也可以喔 -->
+    <section id="gamenewsService" class="container-fluid pb-5">
         <header class="container">
             <h2 class="border-start border-5 border-warning ps-3 my-5">Service</h2>
         </header>
@@ -317,16 +317,17 @@
                         <div class="card-body">
                             <h6 class="card-subtitle mb-2 text-info">"card-subtitle</h6>
                             <ul class="ps-0">
-                                <!-- 原本未調過的div,p,span的程式碼li-->
-                                <!-- 
+                                <!-- 原本未調過的div,跟span的程式碼-->
+                                <!--                                 
                                 <li class="py-1 d-flex justify-content-between align-items-start">
                                     <div>
-                                        <div class="px-2 text-bg-info">Snow Peak001</div>
-                                        <p class="mb-1 px-2">100X300 cm、mm</p>
+                                        <div class="px-2 text-bg-info">Snow Peak000</div>
+                                        <p class="mb-1 px-2">00X300 cm、mm</p>
                                     </div>
-                                    <span class="badge bg-info rounded-pill">NT 1200</span>
+                                    <span class="badge bg-info rounded-pill">NT 001</span>
                                 </li> 
                                 -->
+                                <!-- 調過的程式碼,div"flex-grow-1",跟span"flex:0 0 20%;"-->
                                 <li class="py-1 d-flex gap-3 align-items-start">
                                     <div class="flex-grow-1">
                                         <div class="px-2 text-bg-info">Snow Peak001</div>
@@ -382,15 +383,21 @@
                                 class="card-subtitle mb-2 text-warning d-flex justify-content-between align-items-start">
                                 cdrd-subtitle <span class="badge bg-warning rounded-pill">NT 200</span>
                             </h6>
-                            <p class="ps-4">
-                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio, architecto? Velit quia
-                                sit distinctio consectetur.
+                            <p class="ps-4 pb-5">
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed eveniet eligendi architecto
+                                at a ex enim blanditiis aspernatur. Facilis maiores perspiciatis dolor, laudantium ea
+                                ullam fuga animi facere quos dignissimos, possimus id recusandae! Voluptatibus
+                                perferendis iusto, iste, animi non sunt officia eveniet earum quibusdam, consequuntur
+                                incidunt. Velit, culpa? Accusantium, saepe tempora tenetur perferendis obcaecati
+                                praesentium inventore, dicta laborum quibusdam aut sed exercitationem adipisci est illo
+                                odit autem, distinctio rerum voluptas repellat maxime blanditiis ducimus vel? Non atque
+                                omnis sint fugiat mollitia! Numquam atque fugit ducimus, reiciendis adipisci eligendi
                             </p>
                             <h6
                                 class="card-subtitle mb-2 text-warning d-flex justify-content-between align-items-start">
                                 card-subtitle <span class="badge bg-warning rounded-pill">NT 200</span>
                             </h6>
-                            <p class="ps-4">
+                            <p class="ps-4 pb-5">
                                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio, architecto? Velit quia
                                 sit distinctio consectetur.
                             </p>
@@ -410,7 +417,7 @@
                         <div class="card-body">
                             <h6
                                 class="card-subtitle mb-2 text-success d-flex justify-content-between align-items-start">
-                               card-subtitle
+                                card-subtitle
                                 <span class="badge bg-success rounded-pill">NT 200</span>
                             </h6>
                             <ul class="list-group px-4 mb-3">
@@ -432,36 +439,92 @@
             </div>
         </article>
     </section>
+    <!--  -->
+    <section id="gamenewsRule" class="container pb-5">
+        <!-- h2與artivle合併
+        <header class="container">
+            <h2 class="border-start border-5 border-warning ps-3 my-5">Rule</h2>
+        </header>
+         -->
+        <header class="h2 border-start border-5 border-warning ps-3 my-5">Rule</header>
+        <article class="row row-cols-1 row-cols-md-2 flex-row-reverse g-5">
+            <div class="col">
+                <!-- thumbnail邊框效果 -->
+                <img src="https://picsum.photos/800/500/?random10" class="img-fluid img-thumbnail shadow-lg">
+            </div>
+            <div class="col">
+                <div class="accordion accordion-flush" id="gamenewsAccordion">
+                    <div class="accordion-item rounded-5 overflow-auto mb-3">
+                        <!-- 
+                        <h2 class="accordion-header">
+                            <button class="accordion-button" data-bs-toggle="collapse" data-bs-target="#gamenewsItem1">
+                                Accordion Item #1
+                            </button>
+                        </h2>
+                         -->
+                        <!-- 上面h2與button未合併,下面h2與button合併,加btn在h2有手指頭的效果,fontawesome的為問號圖,me-3推開圖 -->
+                        <h2 class="btn accordion-header accordion-button" data-bs-toggle="collapse"
+                            data-bs-target="#gamenewsItem1">
+                            <i class="fa-solid fa-file-circle-question me-3"></i>
+                            <spam>Accordion Item #1</spam>
+                        </h2>
+                        <div id="gamenewsItem1" class="accordion-collapse collapse show"
+                            data-bs-parent="#gamenewsAccordion">
+                            <div class="accordion-body">
+                                <p>Lorem ipsum dolor sit amet.</p>
+                                <p>Lorem ipsum dolor sit amet.</p>
+                                <ul>
+                                    <li>Lorem ipsum dolor sit amet.</li>
+                                    <li>Lorem ipsum dolor sit amet aaaaaaaaaa.</li>
+                                    <li>Lorem ipsum dolor sit ametaaaaaaaaaaaaaaaaaaaaaaa.</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <!--  rounded-5手風琴為圓角, overflow-auto超出蓋掉,mb-3圖與手風琴的bar齊高 -->
+                    <div class="accordion-item rounded-5 overflow-auto mb-3">
+                        <h2 class="btn accordion-header accordion-button" data-bs-toggle="collapse"
+                            data-bs-target="#gamenewsItem2">
+                            <i class="fa-solid fa-file-circle-question me-3"></i>
+                            <spam>Accordion Item #2</spam>
+                        </h2>
+                        <div id="gamenewsItem2" class="accordion-collapse collapse" data-bs-parent="#gamenewsAccordion">
+                            <div class="accordion-body">
+                                <div class="accordion-body">
+                                    <p>Lorem ipsum dolor sit amet.</p>
+                                    <p>Lorem ipsum dolor sit amet.</p>
+                                    <ul>
+                                        <li>Lorem ipsum dolor sit amet.</li>
+                                        <li>Lorem ipsum dolor sit amet aaaaaaaaaa.</li>
+                                        <li>Lorem ipsum dolor sit ametaaaaaaaaaaaaaaaaaaaaaaa.</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="accordion-item rounded-5 overflow-auto mb-3">
+                        <h2 class="btn accordion-header accordion-button" data-bs-toggle="collapse"
+                            data-bs-target="#gamenewsItem3">
+                            <i class="fa-solid fa-file-circle-question me-3"></i>
+                            <spam>Accordion Item #3</spam>
+                        </h2>
+                        <div id="gamenewsItem3" class="accordion-collapse collapse" data-bs-parent="#gamenewsAccordion">
+                            <div class="accordion-body">
+                                <div class="accordion-body">
+                                    <p>Lorem ipsum dolor sit amet.</p>
+                                    <p>Lorem ipsum dolor sit amet.</p>
+                                    <ul>
+                                        <li>Lorem ipsum dolor sit amet.</li>
+                                        <li>Lorem ipsum dolor sit amet aaaaaaaaaa.</li>
+                                        <li>Lorem ipsum dolor sit ametaaaaaaaaaaaaaaaaaaaaaaa.</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </article>
+    </section>
 </body>
 </html>
-<!-- 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
- -->
