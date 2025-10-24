@@ -1,7 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
 <!--  -->
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -32,7 +31,6 @@
 </head>
 <!--  -->
 <!-- 加入data-bs-spy="scroll" data-bs-target="#gamenewsMenu",可以讓卷軸滾動時固定navbar的字如:pallet,nav必須加入fixed-top -->
-
 <body data-bs-spy="scroll" data-bs-target="#gamenewsMenu">
     <!--  -->
     <!-- 在這網址中選第一個https://getbootstrap.com/docs/5.3/components/navbar/ -->
@@ -451,8 +449,20 @@
         <header class="h2 border-start border-5 border-warning ps-3 my-5">Rule</header>
         <article class="row row-cols-1 row-cols-md-2 flex-row-reverse g-5">
             <div class="col">
-                <!-- thumbnail邊框效果 -->
-                <img src="https://picsum.photos/800/500/?random10" class="img-fluid img-thumbnail shadow-lg">
+                <!-- img-thumbnail為邊框效果但註解掉了 -->
+                <!-- <img src="https://picsum.photos/800/500/?random10" class="img-fluid img-thumbnail shadow-lg"> -->
+                <div class="gamenewsGallery">
+                    <ul>
+                        <li><img src="https://picsum.photos/600/400/?random=10"></li>
+                        <li><img src="https://picsum.photos/600/400/?random=11"></li>
+                        <li><img src="https://picsum.photos/600/400/?random=12"></li>
+                    </ul>
+                    <ul>
+                        <li><img src="https://picsum.photos/600/400/?random=20"></li>
+                        <li><img src="https://picsum.photos/600/400/?random=21"></li>
+                        <li><img src="https://picsum.photos/600/400/?random=22"></li>
+                    </ul>
+                </div>
             </div>
             <div class="col">
                 <div class="accordion accordion-flush" id="gamenewsAccordion">
@@ -531,6 +541,7 @@
     <!--  -->
     <section id="gamenewsContact" class="container-fluid pb-5">
         <!-- <header class="border-start border-5 border-warning ps-3 my-5">Contact</header> -->
+        <!-- container最好獨立,不要跟一起用不然容易跑版 -->
         <header class="container">
             <h2 class="border-start border-5 border-warning ps-3 my-5">Contact</h2>
         </header>
@@ -540,8 +551,8 @@
             src="https://formfacade.com/include/105573775244840680550/form/1FAIpQLSeUJ7cHWp4I6jFZg7w2aeel9eWkUZftdwOm0Wa6fT-R2LY7dA/bootstrap.js?div=ff-compose">
             </script>
     </section>
-<!-- 用bootstrap建立的google表單,報google表單找設定,預先填寫表單找不個個id -->
-<!--  
+    <!-- 用bootstrap建立的google表單,報google表單找設定,預先填寫表單找不個個id -->
+    <!--  
     <section id="contactForm">
         <form class="row g-3" method="POST"
             action="https://docs.google.com/forms/d/e/1FAIpQLSeUJ7cHWp4I6jFZg7w2aeel9eWkUZftdwOm0Wa6fT-R2LY7dA/formResponse">
@@ -563,9 +574,128 @@
         </form>
     </section> 
 -->
+    <footer class="text-bg-dark">
+        <!-- 這裡的position-relative做定位 -->
+        <div class="bg-light bg-opacity-25 position-relative">
+            <img src="./media/star.svg" class="position-absolute start-0 top-0" style="max-width:400px">
+            <!-- 這裡的字體被圖片壓住故position-relative ,lh為line height高度呈現-->
+            <div class="container py-5 lh-lg position-relative">
+                <div class="row g-5">
+                    <div class="col-md-6 col-lg-4">
+                        <h5>Lorem ipsum dolor sit amet.</h5>
+                        <!-- icon 對齊問題https://docs.fontawesome.com/web/style/lists,用這個ul,li寫法-->
+                        <ul class="fa-ul">
+                            <li><span class="fa-li"><i class="fa-solid fa-location-dot"></i></span>Lorem ipsum dolor sit
+                                amet consectetur adipisicing elit. Vero aliquam dolores dolore hic necessitatibus
+                                eligendi! </li>
+                            <li><span class="fa-li"><i class="fa-solid fa-phone"></i></span>02-2901-8274</li>
+                            <li><span class="fa-li"><i class="fa-solid fa-print"></i></span>02-2908-4773 </li>
+                            <li><span class="fa-li"><i class="fa-solid fa-envelope"></i></span>service@toyugi.com.tw
+                            </li>
+                        </ul>
+                        <a class="btn btn-primary rounded-circle d-inline-flex justify-content-center align-items-center mx-1 fs-5"
+                            style="width:2.5rem;height:2.5rem" link="#"><i class="fa-brands fa-facebook-f"></i></a>
+                        <a class="btn btn-danger rounded-circle d-inline-flex justify-content-center align-items-center mx-1 fs-5"
+                            style="width:2.5rem;height:2.5rem" link="#"><i class="fa-brands fa-youtube"></i></a>
+                        <a class="btn btn-success rounded-circle d-inline-flex justify-content-center align-items-center mx-1 fs-4"
+                            style="width:2.5rem;height:2.5rem" link="#"><i class="fa-brands fa-line"></i></a>
+                    </div>
+                    <div class="col-md-6 col-lg-4">
+                        <h5>Lorem ipsum dolor sit amet.</h5>
+                        <p> Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium reiciendis recusandae
+                            facere explicabo praesentium maxime modi earum dolor, quia, corporis rem quae sequi eligendi
+                            dolorem natus ad beatae nisi similique. Sit, alias. Ducimus quasi et illo ea quibusdam
+                            blanditiis aut, delectus unde labore nesciunt magni laboriosam fuga explicabo repudiandae
+                            esse.。 </p>
+                    </div>
+                    <div class="col-md-6 col-lg-4">
+                        <div class="ratio ratio-1x1">
+                            <iframe class="border border-5 border-secondary rounded-circle"
+                                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3614.7020090599085!2d121.41729491546742!3d25.04418494403601!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3442a7bed3dc9b59%3A0x57e6439a2db0fa2a!2zMjQz5paw5YyX5biC5rOw5bGx5Y2A5rOw5bGx6IG36KiT5Lit5b-D!5e0!3m2!1szh-TW!2stw!4v1665497547856!5m2!1szh-TW!2stw"></iframe>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container-fluid bg-secondary bg-opacity-50 text-center text-white">
+            <!-- display原本為in-line改成d-block 然後推開高度-->
+            <small class="py-3 d-block">
+                <div>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Earum maiores consequatur quaerat
+                    dolorem, ducimus dignissimos?</div>
+                <div>
+                    <span>Copyright © 2022</span>
+                    <span class="text-warning">jerming-design</span>
+                    <span>. all rights reserved</span>
+                </div>
+            </small>
+        </div>
+    </footer>
 </body>
 </html>
 <!-- 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
