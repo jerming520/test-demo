@@ -261,6 +261,7 @@ section:not(#gamenewsSlider) {
     .accordion {
         margin-top: 130px;
     }
+    
 }
 @media (min-width: 992px) {
     #gamenewsRule {
@@ -284,13 +285,13 @@ section:not(#gamenewsSlider) {
                 box-shadow: 0 0 5px black;
                 /* 角度旋轉 */
                 &:nth-child(odd) {
-                    left: 13%;
-                    top: -3%;
+                    left: 15%;
+                    top: -10%;
                     transform: rotate(5deg);
                 }
                 &:nth-child(even) {
-                    right: 17%;
-                    bottom: -42%;
+                    right: 23%;
+                    bottom: -35%;
                     transform: rotate(-10deg);
                 }
                 /* 每個li做 animation淡入淡出*/
