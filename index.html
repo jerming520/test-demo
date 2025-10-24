@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <!--  -->
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -31,6 +32,7 @@
 </head>
 <!--  -->
 <!-- 加入data-bs-spy="scroll" data-bs-target="#gamenewsMenu",可以讓卷軸滾動時固定navbar的字如:pallet,nav必須加入fixed-top -->
+
 <body data-bs-spy="scroll" data-bs-target="#gamenewsMenu">
     <!--  -->
     <!-- 在這網址中選第一個https://getbootstrap.com/docs/5.3/components/navbar/ -->
@@ -526,5 +528,45 @@
             </div>
         </article>
     </section>
+    <!--  -->
+    <section id="gamenewsContact" class="container-fluid pb-5">
+        <!-- <header class="border-start border-5 border-warning ps-3 my-5">Contact</header> -->
+        <header class="container">
+            <h2 class="border-start border-5 border-warning ps-3 my-5">Contact</h2>
+        </header>
+        <!-- 至筆記或到google表單,fornfacade按下安裝外掛,再外掛嵌入網址 -->
+        <div class="container" id="ff-compose"></div>
+        <script async defer
+            src="https://formfacade.com/include/105573775244840680550/form/1FAIpQLSeUJ7cHWp4I6jFZg7w2aeel9eWkUZftdwOm0Wa6fT-R2LY7dA/bootstrap.js?div=ff-compose">
+            </script>
+    </section>
+<!-- 用bootstrap建立的google表單,報google表單找設定,預先填寫表單找不個個id -->
+<!--  
+    <section id="contactForm">
+        <form class="row g-3" method="POST"
+            action="https://docs.google.com/forms/d/e/1FAIpQLSeUJ7cHWp4I6jFZg7w2aeel9eWkUZftdwOm0Wa6fT-R2LY7dA/formResponse">
+            <div class="col-12">
+                <label for="inputName" class="form-label">Name</label>
+                <input type="text" class="form-control" id="inputName" name="entry.1163499222" required>
+            </div>
+            <div class="col-12">
+                <label for="inputPhone" class="form-label">Phone</label>
+                <input type="tel" class="form-control" id="inputPhone" name="entry.980251242" required>
+            </div>
+            <div class="col-12">
+                <label for="inputNote" class="form-label">Note</label>
+                <input type="text" class="form-control" id="inputNote" name="entry.193747820">
+            </div>
+            <div class="col-auto">
+                <button type="submit" class="btn btn-primary">Submit</button>
+            </div>
+        </form>
+    </section> 
+-->
 </body>
 </html>
+<!-- 
+
+
+
+ -->
